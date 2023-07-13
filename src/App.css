@@ -1,8 +1,90 @@
 .App {
-  background: #2a6c84;
-  min-height: 100vh;
+  --app-background: #8cb8c8;
+  --bg-color-1: #9db3ed;
+  --bg-color-2: #f9f9f9;
+  --text-color-1: #0b1537;
+  --text-color-2: #636363;
+}
+.App[data-theme="dark"] {
+  --app-background: #14303a;
+  --bg-color-1: #172d67;
+  --bg-color-2: #050c26;
+  --text-color-1: #fbfcfc;
+  --text-color-2: #bbbcbc;
+}
 
+
+.CustomScrollbar::-webkit-scrollbar{
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 5px;
+  /* color: black; */
+}
+.CustomScrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.CustomScrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0, 0.3);
+}
+.CustomScrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(70, 68, 68)  ;
+}
+
+
+.App {
+  background: var(--app-background);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.AppCalculator {
+  height: 70vh;
+  width: 30vw;
+  border-radius: 5%;
+  box-shadow: -15px 20px 25px rgba(0,0,0, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.AppCalculatorNavbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(100, 63, 121); */
+  min-height: 10%;
+  padding: 1rem;
+  overflow: hidden;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.AppCalculatorNavbarLight {
+  background-color: rgb(163, 240, 181);
+}
+.AppCalculatorNavbar img{
+  height: 2rem;
+  width: 2rem;
+}
+.AppCalculatorNavbarToggle {
+  height: 1rem;
+  width: 2rem;
+  border-radius: 1.2rem;
+  background-color: darkcyan;
+  box-shadow: 1px 1px 40px 80px rgba(0,0,0,0.14);
+}
+
+.AppCalculatorNavbarToggleCircle {
+  height: 100%;
+  width: 50%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.AppCalculatorNavbarToggleCircleActive {
+  margin-left: 1rem;
 }

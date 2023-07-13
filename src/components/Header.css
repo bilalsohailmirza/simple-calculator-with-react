@@ -1,0 +1,32 @@
+.Header {
+    flex: 1;
+    background-color: var(--bg-color-1);
+    padding: 1rem;
+    overflow-y: scroll; 
+}
+
+.Header p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: var(--text-color-1);
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.HeaderExpression {
+    overflow-x: scroll;
+    width: 100%;
+}
+.HeaderExpression p {
+    white-space: nowrap;
+    width: fit-content;
+    min-width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem
+}
+
+
+.HeaderResult {
+    font-size: 1.5rem !important   ;
+    font-weight: bold;
+}
